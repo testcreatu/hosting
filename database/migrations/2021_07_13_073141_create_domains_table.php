@@ -20,7 +20,7 @@ class CreateDomainsTable extends Migration
             $table->string('project_name');
             $table->string('purchase_date');
             $table->double('price');
-            $table->bigInteger('client_id');
+            $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
